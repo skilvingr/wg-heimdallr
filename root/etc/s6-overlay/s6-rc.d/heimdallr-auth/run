@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+# ============================================================
+# auth — TOTP captive portal.
+# Binds inside the container; nftables ensures only VPN clients
+# can reach it (only WG_INTERFACE -> AUTH_IP:AUTH_PORT is allowed).
+# ============================================================
+exec python3 /app/heimdallr/auth_server.py
