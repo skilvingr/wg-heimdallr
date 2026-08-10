@@ -1,0 +1,26 @@
+<div class="card">
+<h1>&#128274; VPN Access</h1>
+<p class="subtitle">Enter your credentials</p>
+<form method="post">
+<label for="user">Username</label>
+<input type="text" autocorrect="off" autocapitalize="off" id="user" name="user" required autofocus value="{user_value}">
+<label for="password">Password</label>
+<div class="pw-wrap">
+  <input type="password" id="password" name="password" required value="{password_value}">
+  <button type="button" class="pw-toggle" onclick="togglePassword()"
+          title="Show password">&#128065;</button>
+</div>
+<label for="token">TOTP Token</label>
+<input type="text" id="token" name="token" inputmode="numeric"
+       pattern="[0-9]*" minlength="6" maxlength="6" required
+       placeholder="000 000">
+<button type="submit" style="width:100%">&#128274; Authenticate</button>
+</form>
+{message}
+<script>
+function togglePassword() {{
+  var p = document.getElementById('password');
+  if (p.type === 'password') {{ p.type = 'text'; }} else {{ p.type = 'password'; }}
+}}
+</script>
+</div>

@@ -1,0 +1,15 @@
+<div class="card">
+<div style="font-size:2.8rem;color:var(--green);margin-bottom:.75rem;text-align:center">
+&#10003;</div>
+<h1 class="green">Access Granted</h1>
+<p style="text-align:center;color:var(--muted);line-height:1.6;margin:.75rem 0">
+You may now use all network services.<br>
+Session expires after <strong>{timeout_seconds}</strong> seconds of inactivity.
+</p>
+<div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.25rem">
+    <form method="post" action="/logout" style="margin:0">
+        <button class="btn btn-danger" type="submit">&#128682; Logout</button>
+    </form>
+</div>
+<p class="note" style="text-align:center;margin-top:1rem">You can close this page.</p>
+</div>
